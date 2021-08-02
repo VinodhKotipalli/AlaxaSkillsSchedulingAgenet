@@ -1,0 +1,510 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "bob the personal planner",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "UpdateCalendarIntent",
+          "slots": [
+            {
+              "name": "MeetingPerson",
+              "type": "AMAZON.Person"
+            },
+            {
+              "name": "MeetingEvent",
+              "type": "AMAZON.EventType",
+              "samples": [
+                "just {MeetingEvent} should be fine",
+                "how about {MeetingEvent}",
+                "name it as {MeetingEvent}",
+                "lets call it {MeetingEvent}",
+                "{MeetingEvent}"
+              ]
+            },
+            {
+              "name": "MeetingDate",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "My meeting is at {MeetingTime} {MeetingDate}",
+                "I am meeting {MeetingPerson} on {MeetingDate}",
+                "My meeting is on {MeetingDate}",
+                "It\u0027s on {MeetingDate}",
+                "My appointment with {MeetingPerson} is for {MeetingDate} {MeetingTime} ",
+                "My {MeetingEvent} is at {MeetingTime} on {MeetingPerson}",
+                "My meeting is on {MeetingDate} at {MeetingTime}",
+                "{MeetingTime} {MeetingDate}",
+                "{MeetingDate} {MeetingTime}",
+                "{MeetingDate}"
+              ]
+            },
+            {
+              "name": "MeetingTime",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "I am meeting {MeetingPerson} at {MeetingTime}",
+                "I am meeting {MeetingPerson} on {MeetingDate} at {MeetingTime}",
+                "My meeting is at {MeetingTime}",
+                "My meeting is at {MeetingTime} {MeetingDate}",
+                "{MeetingTime}",
+                "it\u0027s at {MeetingTime}"
+              ]
+            },
+            {
+              "name": "MeetingMode",
+              "type": "CommunicationMode",
+              "samples": [
+                "I am going to sentout {MeetingMode} invitation",
+                "I am going to invite him for {MeetingMode}",
+                "I am going to meet him {MeetingMode}",
+                "I will meet {MeetingPerson} at her {MeetingMode} at {MeetingLocation}",
+                "I am going to call {MeetingPerson} on his {MeetingMode} at {PhoneNumber}",
+                "this is a {MeetingMode} {MeetingEvent}"
+              ]
+            },
+            {
+              "name": "PhoneNumber",
+              "type": "AMAZON.PhoneNumber"
+            },
+            {
+              "name": "MeetingLocation",
+              "type": "AMAZON.StreetAddress"
+            }
+          ],
+          "samples": [
+            "need to contact {MeetingPerson} on her {MeetingMode} {PhoneNumber}",
+            "make a {MeetingMode} call to   {MeetingPerson}  on {MeetingDate}",
+            "need to attend {MeetingEvent} at {MeetingLocation}",
+            "schedule a {MeetingMode} {MeetingEvent} with {MeetingPerson} ",
+            "invite {MeetingPerson} for a {MeetingMode} {MeetingEvent} on {MeetingDate}",
+            "schedule a {MeetingMode} {MeetingEvent} with {MeetingPerson} on {MeetingDate} {MeetingTime}",
+            "add {MeetingEvent} {MeetingDate} {MeetingTime}",
+            "add a meeting with {MeetingPerson}",
+            "add me to {MeetingEvent}",
+            "update my calender {MeetingDate} {MeetingTime} to meet with {MeetingPerson}",
+            "book a meeting with {MeetingPerson} on {MeetingDate} at {MeetingTime}",
+            "add meeting with {MeetingPerson}",
+            "mark {MeetingDate} {MeetingTime} I need to meet with {MeetingPerson}",
+            "mark {MeetingDate} on my calendar ",
+            "schedule me for {MeetingEvent} on {MeetingDate} {MeetingTime}",
+            "block my calender {MeetingDate} {MeetingTime} for {MeetingEvent}",
+            "block my calender {MeetingDate} {MeetingTime} for meeting with {MeetingPerson}",
+            "update my calander with {MeetingEvent}",
+            "add meeting with {MeetingPerson} to my calendar",
+            "add {MeetingEvent} to my calendar",
+            "set a reminder for {MeetingEvent} at {MeetingDate} {MeetingTime} ",
+            "remind me about {MeetingEvent} for {MeetingTime} {MeetingDate}",
+            "block my calender {MeetingDate} {MeetingTime} to meet with {MeetingPerson}",
+            "create a new appointment with {MeetingPerson} on {MeetingDate} at {MeetingTime}",
+            "schedule a new meeting with {MeetingPerson} on {MeetingDate} at {MeetingTime}"
+          ]
+        },
+        {
+          "name": "CheckCalendarIntent",
+          "slots": [
+            {
+              "name": "MeetingDate",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "MeetingTime",
+              "type": "AMAZON.TIME"
+            },
+            {
+              "name": "MeetingPerson",
+              "type": "AMAZON.Person"
+            },
+            {
+              "name": "MeetingEvent",
+              "type": "AMAZON.EventType"
+            },
+            {
+              "name": "QueryType",
+              "type": "QueryType"
+            }
+          ],
+          "samples": [
+            "{QueryType} is my next meeting",
+            "{QueryType} is my appointment with {MeetingPerson}",
+            "{QueryType} meet with {MeetingPerson}",
+            "{QueryType} i have to get in {MeetingEvent}",
+            "{QueryType} do i have my {MeetingEvent}",
+            "{QueryType} is next meeting",
+            "{QueryType} is my {MeetingEvent}",
+            "{QueryType} my calendar on {MeetingDate} ",
+            "{QueryType} for meeting with {MeetingPerson}",
+            "{QueryType} to need to reach for {MeetingEvent}",
+            "{QueryType} is my reporting time for {MeetingEvent}",
+            "{QueryType} free on {MeetingDate} {MeetingTime}",
+            "{QueryType} scheduled for {MeetingDate} {MeetingTime}",
+            "{QueryType} for {MeetingEvent}",
+            "{QueryType} have any time on {MeetingDate} to meet with {MeetingPerson}",
+            "{QueryType} have opening on {MeetingDate}",
+            "{QueryType} was my last meeting with {MeetingPerson}",
+            "{QueryType} is my next meeting with {MeetingPerson}",
+            "{QueryType} my {MeetingDate} {MeetingTime} booked",
+            "{QueryType} my {MeetingDate} {MeetingTime} open",
+            "{QueryType} anything scheduled for {MeetingDate} {MeetingTime}",
+            "look into my calendar and tell me {QueryType} is  {MeetingEvent}",
+            "{QueryType} am I scheduled for {MeetingEvent}",
+            "{QueryType} is my meeting with {MeetingPerson}",
+            "tell me {QueryType} my {MeetingDate} {MeetingTime} looking"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "video",
+                "synonyms": [
+                  "video conference",
+                  "virtual",
+                  "teams",
+                  "skype",
+                  "zoom",
+                  "video call"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "in-person",
+                "synonyms": [
+                  "hosiptal",
+                  "conference room",
+                  "cubical",
+                  "work place",
+                  "house",
+                  "office",
+                  "home",
+                  "on site"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "phone",
+                "synonyms": [
+                  "call her",
+                  "call him",
+                  "conference call "
+                ]
+              }
+            }
+          ],
+          "name": "CommunicationMode"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "check",
+                "synonyms": [
+                  "do I have",
+                  "am I",
+                  "do I have any appointments",
+                  "do I have any meetings",
+                  "do I have any openings",
+                  "do I have anything",
+                  "is there a opening",
+                  "do I have any",
+                  "is my",
+                  "how is"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "where",
+                "synonyms": [
+                  "what is the location",
+                  "what is meeting place"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "when",
+                "synonyms": [
+                  "on what day",
+                  "when is",
+                  "when was",
+                  "at what time"
+                ]
+              }
+            }
+          ],
+          "name": "QueryType"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "UpdateCalendarIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "MeetingPerson",
+              "type": "AMAZON.Person",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "MeetingEvent",
+              "type": "AMAZON.EventType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1038513090165.159829161302"
+              }
+            },
+            {
+              "name": "MeetingDate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1421388146841.560919759779"
+              },
+              "validations": [
+                {
+                  "type": "isInDuration",
+                  "prompt": "Slot.Validation.3481020170.666018006494.116957840497",
+                  "start": "P0D",
+                  "end": ""
+                }
+              ]
+            },
+            {
+              "name": "MeetingTime",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.3481020170.1323789582889"
+              }
+            },
+            {
+              "name": "MeetingMode",
+              "type": "CommunicationMode",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.812095313890.893554898259"
+              }
+            },
+            {
+              "name": "PhoneNumber",
+              "type": "AMAZON.PhoneNumber",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "MeetingLocation",
+              "type": "AMAZON.StreetAddress",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "CheckCalendarIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "MeetingDate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "MeetingTime",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "MeetingPerson",
+              "type": "AMAZON.Person",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "MeetingEvent",
+              "type": "AMAZON.EventType",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "QueryType",
+              "type": "QueryType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.396044541532.996102462911"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1421388146841.560919759779",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which day is your meeting?"
+          },
+          {
+            "type": "PlainText",
+            "value": "On what day are you going to meet with {MeetingPerson}"
+          },
+          {
+            "type": "PlainText",
+            "value": "Whats the date for your {MeetingEvent}"
+          },
+          {
+            "type": "PlainText",
+            "value": "When is your meeting?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.812095313890.893554898259",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "how are you going to contact {MeetingPerson}"
+          },
+          {
+            "type": "PlainText",
+            "value": "how is {MeetingPerson} going to meet you for {MeetingEvent}"
+          },
+          {
+            "type": "PlainText",
+            "value": "are you going to meet {MeetingPerson} in-person or by phone or zoom call?"
+          },
+          {
+            "type": "PlainText",
+            "value": "is {MeetingEvent} virtual or in-person meeting?"
+          },
+          {
+            "type": "PlainText",
+            "value": "How are you going to attend {MeetingEvent}"
+          },
+          {
+            "type": "PlainText",
+            "value": "What kind of meeting is this {MeetingEvent}"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.3481020170.666018006494.116957840497",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please provide a future appointment date"
+          },
+          {
+            "type": "PlainText",
+            "value": "I can help you scheduling up comming meetings."
+          },
+          {
+            "type": "PlainText",
+            "value": "I can help you scheduling up comming meetings. Please provide a valid future date"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.396044541532.996102462911",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what do you want to know about your meeting with {MeetingPerson}"
+          },
+          {
+            "type": "PlainText",
+            "value": "what do you want to know about {MeetingEvent}"
+          },
+          {
+            "type": "PlainText",
+            "value": "what information do you want me look up from calendar"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.3481020170.1323789582889",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what time is {MeetingEvent}"
+          },
+          {
+            "type": "PlainText",
+            "value": "what time is your meeting?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1038513090165.159829161302",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what name do you want to give for new calendar event?"
+          },
+          {
+            "type": "PlainText",
+            "value": "what do you want to call this meeting?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "17"
+}
