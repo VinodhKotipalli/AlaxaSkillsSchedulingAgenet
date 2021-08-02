@@ -115,9 +115,13 @@ class UpdateCalendarIntentHandler(AbstractRequestHandler):
         if meeting_phonenumber:
             meeting.description = 'Please use the phone number ' + str(meeting_phonenumber)
         
-        userCalendar.events.add(meeting)
+        #userCalendar.events.add(meeting)
+        
         if meeting.name:
             speak_output = 'Successfully added ' + meeting.name + ' to your calendar at ' + str(meeting_time) + ' on ' + str(meeting_date)
+        else:
+            speak_output = 'Successfully added a new meeting to your calendar at ' + str(meeting_time) + ' on ' + str(meeting_date)
+
         
         
         if meeting_mode:
@@ -141,7 +145,7 @@ class CheckCalendarIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "Hello World!"
+        speak_output = "This is Check Calendar Intent. It is not implemented yet"
 
         return (
             handler_input.response_builder
